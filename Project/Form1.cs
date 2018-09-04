@@ -26,7 +26,7 @@ namespace Project
         {
             panel1.BackColor = Color.DimGray;
             BackColor = Color.Gray;
-            button1.ForeColor = Color.White;
+            homeButton.ForeColor = Color.White;
             button2.ForeColor = Color.White;
             button3.ForeColor = Color.White;
             button4.ForeColor = Color.White;
