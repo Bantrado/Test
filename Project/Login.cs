@@ -24,6 +24,10 @@ namespace Project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string[] usernames;
+            string[] passwords;
+            usernames = new string[] { "johndoe492", "theresabrown582", "masonjackson938", "kimmillar153" };
+            passwords = new string[] { "ALCS492", "ALCS582","ALCS938","ALCS153" };
             if(textBox1.Text == "" && textBox2.Text != "")
             {
                 ErrorHandle.Text = "Please enter a username.";
@@ -38,7 +42,19 @@ namespace Project
             }
             else // Username + password entered
             {
-                ErrorHandle.Text = "test success";
+                for (int i = 0; i < usernames.Length; i++)
+                {
+                    if (usernames[i] == textBox1.Text && passwords[i] == textBox2.Text)
+                    {
+                        Form tempForm1 = new Form1();
+                        this.Hide();
+                        tempForm1.Show();
+                    }
+                    else
+                    {
+                        ErrorHandle.Text = "Username or password is incorrect.";
+                    }
+                }
             }
         }
     }
